@@ -1,0 +1,50 @@
+# This dev log will need to be made into a google doc and turned in.
+
+## 07/08/2023 10:00am-2:00pm
+
+- I spent time familiarizing myself with bootstrap and seeing how/where I can incorporate flexbox.
+- I learned some things to look out for when designing outlines/wire frames (design choices).
+- I spent some time drawing out my project on paper and planning how I would set the project up in code.
+
+## 07/11/2023 5:00pm-7:00pm
+
+- I made a decent outline of the mobile and tablet versions of the project.
+- I played a bit with figma, creating the mobile version of the page.
+- I decided to move towards an "outlook-ish" email app style of the website.
+- Designing this layout took more time than I expected, so now I know to look out for that.
+
+## 07/14/2023 5:00pm-7:00pm
+
+- I have been falling back a bit, but wanted to make sure that I finished my outline for my desktop version.
+- I looked more into bootstrap and I saw some features I want to implement that I didn't plan out on my outline.
+- If I come across something in bootstrap that does something better than I planned on my outline, I'll just use the bootstrap version.
+
+## 07/16/2023 10:00am-12:00pm / 4:00pm-8:00pm
+
+- I planned to have Saturday to work as well, but got a bit sun sick, so I'll try to make up for it today.
+- I didn't do a lot of outlines, but feel happy with the ones I have.
+- I finished the wire frames today and will have them ready for Monday.
+- I did a bit of the coding to have the core parts of the website done for Wednesday.
+- I got a grasp of using bootstrap displays, so I think the columns will be done by tonight.
+- The nav bar is giving me some problems, but it isn’t essential, so I will leave it for later to work on.
+
+## 07/17/2023-07/18/2023 5:30pm-9:30pm
+
+- I focused on getting the essentials to show off for the demo.
+- Nothing looked super pretty, but it got the idea out.
+
+## 07/20/2023-07/21/2023 5:30pm-9:30pm
+
+- I was using bootstrap sort of wrong.
+- It was making simple things super complex and would take way too much tweaking to make seem decent, so I started over with a new idea in mind.
+- I focused on a more simple design to pursue in the time frame and it started coming out way nicer.
+- To the end of the day, I got all 3 columns done, styled them, made them scrollable and all.
+- Alls that's left is the nav bar to finish up.
+
+## 07/22/2023
+
+- I have 2 things that I need to fix.
+- - If we scroll down too far, then the Nav is off screen.
+- - If we go to small screen view, only column-2 shows and not column-1.
+- - - I was going for a 50/50 screen view and am unsure now if that is achievable.
+- I will focus on the nav for now, and if by deadline I still have time, then I'll work out those two bugs.
