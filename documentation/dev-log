@@ -47,4 +47,9 @@
 - - If we scroll down too far, then the Nav is off screen.
 - - If we go to small screen view, only column-2 shows and not column-1.
 - - - I was going for a 50/50 screen view and am unsure now if that is achievable.
+- - - - Note: I think this is achievable if I use another row and flexbox to achieve this.
 - I will focus on the nav for now, and if by deadline I still have time, then I'll work out those two bugs.
+
+# 7/23/2023
+
+-

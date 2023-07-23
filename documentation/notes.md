@@ -17,3 +17,7 @@ https://getbootstrap.com/docs/5.3/layout/columns/
 https://getbootstrap.com/docs/5.3/components/list-group/#basic-example
 
 - this was used for column-1.
+
+# nav
+
+https://getbootstrap.com/docs/5.3/components/navbar/#nav
