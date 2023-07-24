@@ -3,7 +3,11 @@
     margin-left: 5px;
 }
 
-/* condenses strings to fit in tighter spaces (responsiveness) */
+.right-margin-10px {
+    margin-right: 10px;
+}
+
+/* condenses long strings to fit in tighter spaces (responsiveness) */
 .dot-maker {
     display: inline-block;
     overflow: hidden;
@@ -27,13 +31,23 @@
     color: gray;
 }
 
-/* makes this specific list group start even lower */
-.column-1-list-group-item:first-child {
-    margin-top: 10%;
-    padding-bottom: 7.5%;
+.nav-list-group-item:first-child {
+    margin-top: 0%;
+    padding-bottom: 4%;
 }
 
-.column-1-list-group-item {
+/* this tweak fixes the styling of the offcanvas header */
+.offcanvas-header-fix {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.column-1-list-group-item:first-child {
+    margin-top: 4.5%;
+    padding-bottom: 15px;
+}
+
+.column-1-list-group-item, .nav-list-group-item {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -41,7 +55,7 @@
     background-color: transparent;
 }
 
-.column-1 {
+.column-1, .nav-dark-styling {
     background-color: #212431;
     background-image: linear-gradient(to bottom, #212431, #292D3D);
 }

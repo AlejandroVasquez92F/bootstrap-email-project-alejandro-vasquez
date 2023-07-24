@@ -1,14 +1,48 @@
+<!--
+    Goal:
+    - The goal of this project is to use bootstrap and make the page responsive.
+    - After designing, I learned some things to look out for as well as how to plan a project layout to increase speed and efficiency.
+    - It is good to avoid styling general elements such as all anchor tags.
+    - It is better to target a class or an id.
+    - Using comments to divide sections makes code a lot more readable.
+
+    MVP:
+    - code is readable.
+    - use bootstrap.
+    - use an external style sheet.
+    - no code duplication.
+    - at least 3 columns with bootstrap breakpoint classes.
+    - at least 2 bootstrap components.
+    - has compose/reply buttons.
+    - is responsive.
+    - has text area.
+    - has search bar.
+    - has heading/footing.
+    - uses folders/lists.
+    - at least 3 messages displayed.
+    - clear naming of classes.
+
+    Final Notes:
+    - Using percentages for margin/padding made things look a bit off when changing screen sizes, so I will look out for that in the future.
+    - Considering a simple design can increase design speeds when under a short time constraint.
+    - Show other people/programmers your design before coding to help pick out some of the oddities of your project.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email - Dashboard</title>
+    <title>Envy - Mailbox</title>
+    <link rel="icon" type="image/png" href="./images/red-beta-fish-logo.png">
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -19,13 +53,78 @@
         <!-- Nav Section -->
         <div class="row">
             <!-- Nav Bar -->
-            <!--
-                this nav bar is a little simple...
-                i'm going to add some functionality to it and style it up a bit more.
-            -->
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Inbox</a>
+                    <div class="d-flex align-items-center">
+                        <!-- Hamburger Icon -->
+                        <button class="navbar-toggler d-lg-none right-margin-10px" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Heading -->
+                        <a class="navbar-brand" href="#">Envy - Inbox</a>
+                    </div>
+                    <!-- Search Bar -->
+                    <form class="d-none d-md-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <!-- User Icon -->
+                    <i class="bi bi-person-circle navbar-brand"></i>
+                    <!-- Offcanvas -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <!-- Offcanvas Head -->
+                        <div class="offcanvas-header offcanvas-header-fix">
+                            <a class="offcanvas-title navbar-brand" id="offcanvasNavbarLabel" href="#">Envy - Inbox</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            </button>
+                        </div>
+                        <!-- Offcanvas Body -->
+                        <div class="offcanvas-body nav-dark-styling">
+                            <!-- this is a list of things cut from responsive screen size -->
+                            <ul class="list-group list-group-flush nav-list-group">
+                                <li class="list-group-item nav-list-group-item">
+                                    <!-- Search Bar -->
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </form>
+                                </li>
+                                <li class="list-group-item nav-list-group-item d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-light"><i
+                                            class="bi bi-pencil-square"></i>
+                                        Compose</button>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Inbox</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Tagged</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Important</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Archived</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Sent Mail</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Drafts</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Spam</a>
+                                </li>
+                                <li class="list-group-item nav-list-group-item text-center">
+                                    <a href="#">Trash</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -36,7 +135,8 @@
                 <!-- Mailbox Hyperlinks -->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item column-1-list-group-item">
-                        <button type="button" class="btn btn-outline-light">Compose</button>
+                        <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square"></i>
+                            Compose</button>
                     </li>
                     <li class="list-group-item column-1-list-group-item">
                         <a href="#">Inbox</a>
@@ -210,13 +310,18 @@
                             Redmond, WA 98052
                         </p>
                         <p class="text-center">
+                            <i class="bi bi-xbox"></i>
+                        </p>
+                        <p class="text-center">
                             © 2023 Microsoft Corporation. All Rights Reserved. All trademarks are the property of their
                             respective owners.
                         </p>
                         <button type="button" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-arrow-90deg-left"></i>
                             Reply
                         </button>
                         <button type="button" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-arrow-90deg-right"></i>
                             Forward
                         </button>
                     </div>
@@ -235,7 +340,10 @@
                         <!-- Body Input Field -->
                         <textarea class="mb-3 form-control" rows="3"></textarea>
                         <!-- Send Button-->
-                        <button type="button" class="btn btn-primary btn-sm">Send</button>
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <i class="bi bi-send-fill"></i>
+                            Send
+                        </button>
                     </div>
                 </div>
             </div>
